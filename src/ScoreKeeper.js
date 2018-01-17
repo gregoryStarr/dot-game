@@ -1,25 +1,16 @@
-const points = []
+"use strict";
+const points = [];
 
 class ScoreKeeper{
     constructor(){
-        // Private Memnbers
-
-        document.addEventListener("DOTISCLICKED", this.updateScore)
+        document.addEventListener("DOTISCLICKED", this.updateScore);
         this.scoreCmpt = null
     }
 
-    init(){
-        // Setup the stage postioning and box model props
-
-        // init the score keeper and wslider
-
-        // kick off the factory
-
-    }
-
+    // Todo: Still need to implement the inverse value for points based on size of dot...
     updateScore(event){
-        const point = event.detail.target
-        points.push(point)
+        const point = event.detail.target;
+        points.push(point);
         document.getElementById('scoreCmpt').innerText = "Score: "+points.length
     }
 

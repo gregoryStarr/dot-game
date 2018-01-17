@@ -1,9 +1,10 @@
+"use strict";
 class Dot{
     constructor(){
         // Private Memnbers
         this.element = document.createElement('button');
         this.element.baseClass = this;
-        this.element.onclick = this.handleClick.bind(this)
+        this.element.onclick = this.handleClick.bind(this);
         this.pointValue = 0;
         this.width = 0;
         this.height = 0;
@@ -11,21 +12,23 @@ class Dot{
         this.rate = getRandomInt(5, 10)
     }
 
-
     init(){
         this.setSize(getRandomInt(10, 100))
     }
 
     // Public methods
     handleClick(){
-        this.element.style.background="#ff00ab"
-        this.element.style.opacity="0"
+        this.element.style.background="#ff00ab";
+        this.element.style.opacity="0";
         const scope = this;
-        setTimeout(()=>{
+
+        // allow time for fade to pink when clicked on
+        setTimeout( () => {
             scope.dispatchClickEvent();
-        }, 2000)
+        },1000)
     }
 
+    // Dispatches custome event. which updates the score, and has this object instnce removed
     dispatchClickEvent(){
        const event = new CustomEvent("DOTISCLICKED",{
             detail: {
@@ -38,6 +41,7 @@ class Dot{
         this.element.dispatchEvent(event);
     };
 
+    // Sets the size  of the dot
     setSize(size){
         const styleObj = this.element.style;
         styleObj.width = size + "px";
@@ -47,10 +51,6 @@ class Dot{
         styleObj.boxShadow= '0px 0px 20px 10px rgba( 255, 255, 255, .2)';
 
     };
-
-    setPosition(){
-        this.element.style.top ++;
-    }
 
     setIndex(i){
         this.index = i;
