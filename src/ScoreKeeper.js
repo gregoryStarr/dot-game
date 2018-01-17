@@ -12,7 +12,7 @@ class ScoreKeeper{
     // Todo: Still need to implement the inverse value for points based on size of dot...
     updateScore(event){
         this.points.push(event);
-        this.score += event.pointValue;
+        this.score += event.detail.pointValue;
         document.getElementById('scoreCmpt').innerText = "Score: "+this.score
     }
 

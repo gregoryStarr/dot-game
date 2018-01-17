@@ -45,9 +45,9 @@ class Dot{
         const event = new CustomEvent("UPDATEPRICE",{
             detail: {
                 pointValue: this.value,
-                target: this
             },
             bubbles: true,
+            cancelable:false
         });
         this.element.dispatchEvent(event);
 
@@ -60,7 +60,10 @@ class Dot{
     // Dispatches custome event. which updates the score, and has this object instnce removed
     dispatchClickEvent(){
        const event = new CustomEvent("DOTISCLICKED",{
-           pointValue: this.value,
+            detail: {
+                pointValue: this.value,
+                target: this
+            },
            bubbles: true,
            cancelable:false
         });
