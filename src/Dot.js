@@ -42,6 +42,15 @@ class Dot{
         this.element.style.opacity="0";
         const scope = this;
 
+        const event = new CustomEvent("UPDATEPRICE",{
+            detail: {
+                pointValue: this.value,
+                target: this
+            },
+            bubbles: true,
+        });
+        this.element.dispatchEvent(event);
+
         // allow time for fade to pink when clicked on
         setTimeout( () => {
             scope.dispatchClickEvent();
@@ -51,11 +60,9 @@ class Dot{
     // Dispatches custome event. which updates the score, and has this object instnce removed
     dispatchClickEvent(){
        const event = new CustomEvent("DOTISCLICKED",{
-            detail: {
-                pointValue: this.value,
-                target: this
-            },
+           pointValue: this.value,
            bubbles: true,
+           cancelable:false
         });
 
         this.element.dispatchEvent(event);
