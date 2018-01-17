@@ -10,6 +10,26 @@ class Dot{
         this.height = 0;
         this.index = null;
         this.rate = getRandomInt(5, 10)
+
+        let requestId = 0;
+        const element = this.element;
+        function animate(time) {
+            const current = parseInt(element.style.top);
+            const position = (current + element.baseClass.rate  * .5);
+            if (parseInt(element.style.top) >= window.app.height - 10) {
+                window.app.dotFactory.removeDot(element.baseClass);
+                window.cancelAnimationFrame(requestId);
+                return;
+            }
+
+            element.style.top = position + 'px';
+
+
+
+            requestId = window.requestAnimationFrame(animate);
+        }
+        requestId = window.requestAnimationFrame(animate)
+
     }
 
     init(){
@@ -58,5 +78,9 @@ class Dot{
 
     setValue(size){
         this.value = Math.floor(Math.round(1200 / size - 11))
+    }
+
+    setRate(value){
+        this.rate = getRandomInt(5, 10 + (value / 10 ));
     }
 }

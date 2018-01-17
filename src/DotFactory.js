@@ -31,6 +31,7 @@ class DotFactory {
         dot.id = guid();
         dot.setSize(size);
         dot.setValue(size)
+        dot.setRate(size)
         dot.element.className = "dot";
         dot.element.style.opacity = getRandomArbitrary(.1, 1);
         dot.setIndex(this.dotCollection.length+1);

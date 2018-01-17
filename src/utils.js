@@ -27,14 +27,17 @@ function guid() {
 }
 
 // The Animation function using requestAnimationFrame
-function animate() {
+/*
+let animationStartTime = window.performance.now()
+function animate(time) {
+    const diff = (time - animationStartTime)/10 % 300;
     var dots = document.querySelectorAll('.dot');
     var scope = this;
     if(dots.length>0){
         dots.forEach(function(dot, index){
             const current = parseInt(dot.style.top);
             const position = (current + dot.baseClass.rate  * .5);
-
+            console.log(current * ((time - animationStartTime)/100 % 10))
             if (parseInt(dot.style.top) >= window.app.height - 10) {
                 scope.app.dotFactory.removeDot(dot);
                 return;
@@ -47,4 +50,4 @@ function animate() {
 
 
     window.requestAnimationFrame(animate);
-}
+}*/

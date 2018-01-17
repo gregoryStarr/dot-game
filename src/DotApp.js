@@ -11,7 +11,7 @@ class DotApp{
         this.width = window.innerWidth;
         this.height= window.innerHeight - 60;
         this.initAnimation();
-        animate();
+        //window.requestAnimationFrame(animate)
     }
 
     init(){
