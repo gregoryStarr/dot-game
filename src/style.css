@@ -1,0 +1,127 @@
+#sliderCmpt {
+  -webkit-appearance: none;
+  position: absolute;
+  top: 45px;
+  left: 20px; }
+
+#sliderCmpt:focus {
+  outline: none; }
+
+#sliderCmpt::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d;
+  background: #cfd1b5;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101; }
+
+#sliderCmpt::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+  border: 1px solid rgba(190, 185, 185, 0.74);
+  height: 11px;
+  width: 29px;
+  border-radius: 3px;
+  background: #0a313a;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -1.5px; }
+
+#sliderCmpt:focus::-webkit-slider-runnable-track {
+  background: #cfd1b5; }
+
+#sliderCmpt::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d;
+  background: #cfd1b5;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101; }
+
+#sliderCmpt::-moz-range-thumb {
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+  border: 1px solid rgba(190, 185, 185, 0.74);
+  height: 11px;
+  width: 29px;
+  border-radius: 3px;
+  background: #0a313a;
+  cursor: pointer; }
+
+#sliderCmpt::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+#sliderCmpt::-ms-fill-lower {
+  background: #cfd1b5;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d; }
+
+#sliderCmpt::-ms-fill-upper {
+  background: #cfd1b5;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 0px 0px 1px #000000, 0px 0px 0px #0d0d0d; }
+
+#sliderCmpt::-ms-thumb {
+  box-shadow: 0px 0px 0.6px #000000, 0px 0px 0px #0d0d0d;
+  border: 1px solid rgba(190, 185, 185, 0.74);
+  height: 11px;
+  width: 29px;
+  border-radius: 3px;
+  background: #0a313a;
+  cursor: pointer;
+  height: 8.4px; }
+
+#sliderCmpt:focus::-ms-fill-lower {
+  background: #cfd1b5; }
+
+#sliderCmpt:focus::-ms-fill-upper {
+  background: #cfd1b5; }
+
+#stage {
+  background: #212121;
+  overflow: hidden; }
+
+.dot {
+  background: #c286ff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s all linear; }
+  .dot:focus {
+    outline: none; }
+
+body {
+  overflow: hidden; }
+
+#DotApp {
+  background: #535353;
+  margin-top: 20px; }
+
+#scoreCmpt {
+  color: #ff0000;
+  display: block;
+  margin-left: 20px; }
+
+header {
+  background: #53031d;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  height: 80px;
+  border-bottom: solid 1px white;
+  z-index: 1; }
+
+h4#name {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */

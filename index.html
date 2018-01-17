@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dot Game</title>
+    <link rel="stylesheet" type="text/css" href="./src/style.css">
+</head>
+<body>
+
+<div id="DotApp">
+    <header>
+        <h4 id="scoreCmpt">Score</h4>
+        <input type="range" id="sliderCmpt" min="10" max="100" value="10" oninput="app.dotFactory.setRate(event)"/>
+        <h4 id="name">Greg Starr</h4>
+    </header>
+
+    <div id="stage"></div>
+</div>
+<script src="./src/utils.js"></script>
+<script src="./src/ScoreKeeper.js"></script>
+<script src="./src/DotFactory.js"></script>
+<script src="./src/Dot.js"></script>
+<script src="src/DotApp.js"></script>
+<script src="src/Animator.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
