@@ -9,6 +9,9 @@ class DotFactory {
         // Listener for when a dot is clicked so that it can be removed
         document.addEventListener("DOTISCLICKED", (e) => {
             this.removeDot(e.detail.target)
+            const dot = this.create()
+            dot.element.style.backgroundColor = "#FF3A00";
+            dot.element.style.left = getRandomInt(0, window.app.width - 20) + "px"
         });
     }
 
