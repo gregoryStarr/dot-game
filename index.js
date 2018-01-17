@@ -1,3 +1,4 @@
+"use strict";
 
 window.onload = function() {
     this.app = new DotApp();

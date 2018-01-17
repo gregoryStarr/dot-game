@@ -5,7 +5,7 @@ class Dot{
         this.element = document.createElement('button');
         this.element.baseClass = this;
         this.element.onclick = this.handleClick.bind(this);
-        this.pointValue = 0;
+        this.value = 0;
         this.width = 0;
         this.height = 0;
         this.index = null;
@@ -32,7 +32,7 @@ class Dot{
     dispatchClickEvent(){
        const event = new CustomEvent("DOTISCLICKED",{
             detail: {
-                pointValue: this.width / 100 * 100,
+                pointValue: this.value,
                 target: this
             },
            bubbles: true,
@@ -54,5 +54,9 @@ class Dot{
 
     setIndex(i){
         this.index = i;
+    }
+
+    setValue(size){
+        this.value = Math.floor(Math.round(1200 / size - 11))
     }
 }

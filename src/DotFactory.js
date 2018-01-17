@@ -25,10 +25,12 @@ class DotFactory {
 
     // Creates a dot
     create() {
+        const size = getRandomInt(10, 100);
         const dot = new Dot();
         this.dotCollection.push(dot);
         dot.id = guid();
-        dot.setSize(getRandomInt(10, 100));
+        dot.setSize(size);
+        dot.setValue(size)
         dot.element.className = "dot";
         dot.element.style.opacity = getRandomArbitrary(.1, 1);
         dot.setIndex(this.dotCollection.length+1);
